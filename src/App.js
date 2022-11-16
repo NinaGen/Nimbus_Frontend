@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Button from 'react-bootstrap/Button';
 
 import AuthService from "./services/auth.service";
 
@@ -53,14 +54,14 @@ class App extends Component {
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to={"/home"} className="nav-link">
-                Home
+              <img src ="//cdn-icons-png.flaticon.com/512/2499/2499093.png" alt ="home-img" height = "22px" width = "22px"/> 
               </Link>
             </li>
 
             {currentUser && (
               <li className="nav-item">
                 <Link to={"/user"} className="nav-link">
-                  User
+                <img src ="//cdn-icons-png.flaticon.com/512/880/880441.png" alt ="user-img" height = "25px" width = "25px"/> 
                 </Link>
               </li>
             )}
@@ -74,8 +75,11 @@ class App extends Component {
                 </Link>
               </li>
               <li className="nav-item">
+                <img src ="//cdn-icons-png.flaticon.com/512/3132/3132084.png" alt ="settings-img" height = "25px" width = "25px"/>
+              </li>
+              <li className="nav-item">
                 <a href="/login" className="nav-link" onClick={this.logOut}>
-                  LogOut
+                  <img src ="//cdn-icons-png.flaticon.com/512/1286/1286907.png" alt ="logout-img" height = "22px" width = "22px"/>
                 </a>
               </li>
             </div>
@@ -83,13 +87,13 @@ class App extends Component {
             <div className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link to={"/login"} className="nav-link">
-                  Login
+                  <img src ="//cdn-icons-png.flaticon.com/512/3580/3580181.png" alt ="login-img" height = "30px" width = "30px"/>
                 </Link>
               </li>
 
               <li className="nav-item">
                 <Link to={"/register"} className="nav-link">
-                  Sign Up
+                <Button class="btn btn-primary" >Sign up</Button>
                 </Link>
               </li>
             </div>

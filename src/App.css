@@ -30,3 +30,13 @@ abel {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+
+.profile-img-card2 {
+  margin: 0 auto 10px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+}
+
+

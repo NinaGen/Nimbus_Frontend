@@ -48,15 +48,27 @@ class Profile extends Component {
         return (
             <div>
                 <header className="jumbotron">
-                    <p>left Profile picture here</p>
-                    <h3>
-                        <strong>{currentUser.username}</strong> Profile
-                    </h3>
+                     <img 
+                        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+                        alt="profile-img"
+                        className="profile-img-card2"
+                    />  
+                    
                 </header>
-                <Button> Setting </Button>
-                <Button> Edit Profile </Button>
-
-                {/* for debug only */}
+                
+                <div>
+                <h3 class ="profile-name-pic-align">
+                    <strong>{currentUser.username}</strong> Profile
+                    </h3>
+                </div>
+                <div>
+                <Button variant="outline-secondary">Setting</Button>
+                <Button variant="outline-secondary">Edit Profile</Button>
+                </div>
+                
+                
+                <div>
+                        {/* for debug only */}
                 <p>
                     <strong>Token:</strong>{" "}
                     {currentUser.accessToken.substring(0, 20)} ...{" "}
@@ -70,6 +82,23 @@ class Profile extends Component {
                     <strong>Email:</strong>{" "}
                     {currentUser.email}
                 </p>
+
+                </div>
+                <div className="container">
+                    <div class="row">
+                    <div class="col-md-3">
+                    <header className="jumbotron ">.1</header>
+                    
+                    </div>
+                    <div class="col-md-8 col-md-offset-3">
+                    <header className="jumbotron ">.2</header>
+                    
+                    </div>
+                    </div>
+			    </div>
+                
+            
+               
             </div>)
     }
 
@@ -91,6 +120,9 @@ class Profile extends Component {
                     : null}
             </div>
         );
+
+        
     }
+    
 }
 export default withRouter(Profile);
